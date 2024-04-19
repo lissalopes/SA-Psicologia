@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-mais-clara: #E1E5F2;
+    --cor-clara: #979DAC;
+    --azul-medio: #023E7D;
+    --azul-escuro: #001233;
+    --preto: #000000;
+    --max-width: 1280px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.nav_bar img {
+    width: 50px;
+}
+
+.nav_bar {
+    max-width: var(--max-width);
+    height: 70px;
+    background: var(--cor-mais-clara);
+    padding-inline: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+
+
+.menu a {
+    font-size: 12px;
+    color: var(--azul-escuro);
+    padding-block: 10px;
+}
+
+.background {
+    height: calc(100vh - 70px);
+    background: linear-gradient(to top, #979DAC, #E1E5F2);
+}
+
+.burger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid var(--preto);
+    cursor: pointer;
+}
+
+.burger::before,
+.burger::after {
+    content: " ";
+    display: flex;
+    width: 30px;
+    height: 3px;
+    background: var(--preto);
+    margin-top: 5px;
+}
+
+@media (max-width: 750px) {
+    .burger {
+        display: block;
+        z-index: 1000;
+    }
+    .menu a {
+        font-size: large;
+    }
+    
+    .menu {
+        position: fixed;
+        border-radius: 20px 0 0 20px;
+        top: 70px;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 1em;
+        background: rgba(151, 157, 172, .8);
+        font-size: 30px;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+}

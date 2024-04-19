@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style/style.css">
+    <title>SA Psicologia</title>
+</head>
+
+<body>
+    <nav class="nav_bar">
+        <div class="nav_logo">
+            <img src="src/img/Logo_1.svg" alt="Sonia Andrade Logo">
+        </div>
+        <button id="menu" class="burger" onclick="toggleMenu()"></button>
+        <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Quem sou eu</a></li>
+            <li><a href="">Como funciona</a></li>
+            <li><a href="">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="background">
+        <div class="first">
+            <div class="circle"></div>
+            <img src="src/img/Sonia Andrade.png" alt="Sonia Andrade">
+            <div class="textOne"></div>
+        </div>
+        <div class="second">
+            <div class="text2"></div>
+            <button></button>
+        </div>
+        <div class="third">
+            <div class="text3"></div>
+        </div>
+    </div>
+   <script>
+        function toggleMenu() {
+            const menuList = document.getElementById("menu");
+            menuList.classList.toggle("open");
+        }
+   </script>
+</body>
+<footer></footer>
+</html>
